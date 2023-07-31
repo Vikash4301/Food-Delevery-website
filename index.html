@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Online Food Delivery Website</title>
+    <script> 
+    function validateform(){
+    var name=document.myform.name.value;
+    var phnum=document.myform.phnum.value;
+    var mail=document.myform.mail.value;
+    if(name==null || name==""){
+    alert("Name can't be blank!");
+    return false;
+    }else if(phnum.length!=10){
+    alert("Phone number should be 10 characters long!");
+    return false;
+    }
+    else if(mail==null || mail==""){
+    alert("Email can't be blank!");
+    return false;
+    }
+}
+    </script>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" media="screen and (max-width: 970px)" href="css/phone.css">
+    <link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@600&display=swap" rel="stylesheet">">
+</head>
+<body>
+    <nav id="navbar">
+        <div id="logo">
+            <img src="logo.png" alt="MyOnlineMeal.com">
+        </div>
+        <ul>
+            <li class="item"><a href="#home">Home</a></li>
+            <li class="item"><a href="#services-container">Services</a></li>
+            <li class="item"><a href="#client-section">Our Clients</a></li>
+            <li class="item"><a href="#contact">Contact Us</a></li>
+        </ul>
+
+
+    </nav>
+
+    <section id="home">
+        <h1 class="h-primary">Welcome to MyOnlineMeal</h1>
+        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Veritatis voluptatibus earum reiciendis ipsam quae voluptas vitae voluptate odio doloremque! Unde?</p>
+        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Temporibus dolores deleniti quam ipsum neque blanditiis eligendi repellendus hic dolor nemo.</p>
+        <button class="btn">Order Now</button>
+
+    </section>
+
+    <section id="services-container">
+        <h1 class="h-primary center">Our Services</h1>
+        <div id="services">
+            <div class="box">
+                <img src="1.jpg" alt="">
+                <h2 class="h-secondary center">Food  Catering</h2>
+                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Suscipit cum reiciendis earum a, inventore veritatis aspernatur ab nostrum repellat explicabo itaque quia necessitatibus. Dolor.</p>
+            </div>
+            <div class="box">
+                <img src="2.jpg" alt="">
+                <h2 class="h-secondary center">Bulk Ordering</h2>
+                <p class="center">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Suscipit cum reiciendis earum a, inventore veritatis aspernatur ab nostrum repellat explicabo itaque quia necessitatibus. Dolor.</p>
+            </div>
+            <div class="box">
+                <img src="3.jpg" alt="">
+                <h2 class="h-secondary center">Food Ordering</h2>
+                <p class="center">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Suscipit cum reiciendis earum a, inventore veritatis aspernatur ab nostrum repellat explicabo itaque quia necessitatibus. Dolor.</p>
+            </div>
+        </div>
+    </section>
+    <section id="client-section">
+        <h1 class="h-primary center">Our Clients</h1>
+        <div id="clients">
+            <div class="client-item">
+                <img src="logo1.jpg" alt="Our Client">
+            </div>
+            <div class="client-item">
+            <img src="logo4.jpg" alt="Our Client">
+        </div>
+        <div class="client-item">
+        <img src="logo5.jpg" alt="Our Client">
+    </div>
+    <div class="client-item">
+    <img src="logo6.jpg" alt="Our Client">
+</div>
+
+
+
+    </div>
+
+    </section>
+    <section id="contact">
+        <h1 class="h-primary center">Contact Us</h1>
+        <div id="contact-box">
+            <div class="container"></div>
+            <form name="myform" action="" method="post" onsubmit="return validateform()">
+                <i class="fas fa-paper-plane"></i>
+                <div class="input-group" >
+                    <label>Name:</label>
+                    <input type="text" name="name" placeholder="Enter your name" id="contact-name">
+                    <span id="name-error">name is required</span>
+                    
+                </div>
+                <div class="input-group">
+                    <label>Phone Number:</label>
+                    <input type="tel" name="phnum" placeholder="123 456 7890">
+                    <span id="phone-error">phone is require</span>
+                    
+                </div>
+                <div id="input-group">
+                    <label >Email:</label>
+                    <input name="mail" type="email" placeholder="Enter your Email">
+                    <span id="email-error">email is required</span>
+                    
+                </div>
+                <input type="submit" value="Submit"></input>
+                <span id="submit-error">please fix error</span>
+                </form>
+
+            
+
+        </div>
+    </section>
+    <footer>
+        <div class="center">
+            copyright &copy; www.myOnlineMeal.com.All rights reserved!
+        </div>
+    </footer>
+</body>
+</html>
